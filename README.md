@@ -10,10 +10,10 @@ A website project dedicated for people who are interested in streetwear world. T
 
 
 #### Technologies used
--HTML
--CSS
--JavaScript
--JQuery
--Laravel
--PHP
--MySQL
+-HTML  
+-CSS  
+-JavaScript  
+-JQuery  
+-Laravel  
+-PHP  
+-MySQL  
