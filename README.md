@@ -9,7 +9,7 @@ A website project dedicated for people who are interested in streetwear world. T
 -Show off your latest pick up.
 
 
-### Technologies used
+#### Technologies used
 -HTML
 -CSS
 -JavaScript
