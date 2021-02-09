@@ -1,0 +1,521 @@
+body
+{
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	overflow-y: hidden;
+	user-select: none;
+	color: #151515;
+}
+
+.ball, .valueHolder
+{
+	font-family: 'Work Sans', 'FontAwesome', sans-serif;
+}
+
+.WTS
+{
+	color: #00B4FF !important;
+	padding-bottom: 9px;
+	border-bottom: 3px solid #00B4FF;
+}
+
+/* OKNO TWORZENIA OGŁOSZENIA*/
+
+.adwin-main
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	justify-content: center;
+	display: flex;
+}
+
+.adwin-cen
+{
+	height: 100%;
+	width: 1400px;
+	align-items: center;
+	display: flex;
+}
+
+.adwin-window
+{
+	width: 100%;
+	height: 700px;
+}
+
+.adwin-header
+{
+	border-bottom: 2px solid #151515;
+}
+
+.adwin-header h1
+{
+	font-size: 45px;
+	margin: 0;
+	font-weight: 400;
+}
+
+.adwin-form
+{
+	width: 100%;
+	height: 645px;
+	padding-top: 40px;
+}
+
+.adwin-form-left
+{
+	width: 50%;
+	height: 100%;
+	float:left;
+}
+
+form
+{
+	margin: 0 auto;
+	width: 50%;
+}
+
+.adwin-form input[type=text]
+{
+	/*display: inline-block;*/
+	font-family: 'Mukta', sans-serif;
+	font-weight: 400;
+	border: 1px solid #DDD;
+	font-size: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	width: 100%;
+}
+
+.adwin-form input[type=text]:focus
+{
+	border-color: #00B4FF;
+	color: #151515;
+}
+
+.adwin-delivery label
+{
+	font-size: 12px;
+}
+
+.adwin-form select
+{
+	border: 1px solid #DDD;
+	font-family: 'Mukta', 'FontAwesome', sans-serif;
+	font-weight: 400;
+	outline: none;
+}
+
+.adwin-form select:focus
+{
+	border: 1px solid #00B4FF;
+}
+
+.adwin-delivery
+{
+	margin-top: 5px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+.adwin-dimensions
+{
+	margin: 5px auto 0 auto;
+	align-items: center;
+	display: none;
+}
+
+.adwin-dimensions input[type=text]:first-child
+{
+	margin-left: 0;
+}
+
+.adwin-dimensions input[type=text]
+{
+	margin-left: 5px;
+}
+
+#adwin-length
+{
+	margin-top: 5px;
+	display: none;
+}
+
+.adwin-form #adwin-textarea
+{
+	display: inline-block;
+	font-family: 'Mukta', sans-serif;
+	font-weight: 400;
+	border: 1px solid #DDD;
+	font-size: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	margin-top: 5px;
+	width: 100%;
+	resize: none;
+	overflow-y: hidden;
+}
+
+.adwin-form #adwin-textarea:focus
+{
+	border: 1px solid #00B4FF;
+	color: #151515;
+}
+
+#adwin-shipprice
+{
+	display: none;
+}
+
+#adwin-meetcity
+{
+	margin-top: 5px;
+	display: none;
+}
+
+#adwin-fit-footwear
+{
+	display: inline-block;
+}
+
+.adwin-form-right
+{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.adwin-form-right-window
+{
+	width: 361px;
+}
+
+.adwin-addphoto
+{
+	width: 359px;
+	height: 270px;
+	background-color: white; 
+	border: 1px solid #DDD;
+	display: flex;
+	align-items:  center;
+	justify-content: center;
+	color: #DDD;
+}
+
+.adwin-center
+{
+	text-align: center;
+}
+
+.adwin-addphoto i
+{
+	font-size: 80px;
+}
+
+.adwin-addphoto p
+{
+	margin: 0;
+}
+
+.adwin-addphoto:hover
+{
+	border-color: #00B4FF;
+	cursor: pointer;
+}
+
+.adwin-addphoto:hover i
+{
+	color: #00B4FF;
+}
+
+.adwin-addphoto:hover p
+{
+	color: #00B4FF;
+}
+
+.adwin-add
+{
+	width: 351px;
+	background-color: #00B4FF;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 2px;
+	padding: 5px;
+	text-align: center;
+}
+
+.adwin-add:hover
+{
+	filter: brightness(1.1);
+}
+
+.adwin-photos
+{
+	margin-top: 7px;
+	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+}
+
+.adwin-photo
+{
+	width: 112px;
+	height: 85px;
+	background-color: white; 
+	border: 1px solid #DDD;
+	display: flex;
+	align-items:  center;
+	justify-content: center;
+}
+
+.adwin-photo:hover
+{
+	border-color: #00B4FF;
+	cursor: pointer;
+}
+
+.adwin-photo:hover i
+{
+	color: #00B4FF;
+}
+
+.adwin-photo i
+{
+	font-size: 40px;
+	color: #DDD;
+}
+
+.adwin-form-right a
+{
+	text-decoration: none;
+}
+
+#adwin-lettercounter
+{
+	margin-bottom: 10px;
+	padding: 0;
+	font-size: 12px;
+}
+
+.adwin-buynow 
+{
+	position: relative;
+	display: inline-block;
+	color: #00B4FF;
+	font-weight: 600;
+}
+
+.adwin-buynow .adwin-popup 
+{
+  visibility: hidden;
+  width: 180px;
+  background-color: white;
+  color: #757575;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #DDD;
+  border-radius: 6px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 1;
+}
+
+/* CHECKBOX */
+
+.adwin-buynow:hover .adwin-popup 
+{
+  visibility: visible;
+}
+
+.adwin-checkbox-buynow
+{
+	margin: 10px 0;
+}
+
+.adwin-remembertag
+{
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.adwin-checkboxContainer input
+{
+	display: none;
+}
+
+.adwin-checkboxContainer
+{
+	display: inline-block;
+	padding-left: 20px;
+	position: relative;
+	cursor: pointer;
+	font-size: 13px;
+	user-select: none;
+}
+
+.adwin-checkboxContainer .adwin-checkmark
+{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+
+.adwin-checkboxContainer input:checked + .adwin-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.adwin-checkboxContainer:hover .adwin-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.adwin-checkboxContainer input:checked + .adwin-checkmark:after
+{
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 7px;
+	border-left: 2px solid #00B4FF;
+	border-bottom: 2px solid #00B4FF;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.adwin-cbCmargin
+{
+	margin-left: 10px;
+}
+
+/* FOOTER */
+
+#foot
+{
+	position: absolute;
+	position: flex;
+	bottom: 0;
+}
+
+
+
+
+
+
+#adwin-select-category,
+#adwin-select-condition,
+#adwin-select-kind,
+#adwin-select-sizeClothing,
+#adwin-select-fit,
+#adwin-select-cw
+{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#adwin-select-sizeFootwear
+{
+	position: relative;
+	cursor: pointer;
+	display: none;
+}
+
+.dropContainer
+{
+	position: absolute;
+	overflow-y: auto;
+	max-height: 250px;
+	width: 100%;
+	background-color: white;
+	display: none;
+	text-align: left;
+	border: 1px solid #DDD;
+	border-top-color: #00B4FF;
+	left: 0;
+	margin-left: -1px;
+	z-index: 100;
+}
+
+.valueHolder
+{
+	padding: 10px 5px 10px 5px;
+}
+
+.dropOption
+{
+	border-bottom: 1px solid #DDD;
+	padding: 5px;
+}
+
+.dropOption:hover
+{
+	background-color: #DDD;
+}
+
+.btn 
+{
+	background-color: white;
+	text-indent: 0;
+	border: 1px solid #DDD;
+	color: #757575;
+	font-size: 13px;
+	width: 100%;
+	text-align: left;
+	box-sizing: border-box;
+
+	margin-top: 5px;
+
+	background-image:
+    linear-gradient(45deg, transparent 50%, #00B4FF 50%),
+    linear-gradient(135deg, #00B4FF 50%, transparent 50%),
+    linear-gradient(to right, white, white);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+.dropContainer::-webkit-scrollbar 
+{
+	width: 10px;
+}
+
+.dropContainer::-webkit-scrollbar-track 
+{
+   background-color: #DDD;
+}
+	
+.dropContainer::-webkit-scrollbar-thumb 
+{
+	background: #00B4FF;
+}
+
+.multicolored
+{
+  background: -webkit-linear-gradient(red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dropOption-different
+{
+	font-weight: 600;
+	color: #00B4FF;
+}

@@ -1,0 +1,466 @@
+body
+{
+	margin: 0;
+	background-color: white;
+	font-family: 'Work Sans', sans-serif;
+	overflow-y: scroll;
+}
+
+/**
+{
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}*/
+
+/* OKNO Z OGŁOSZENIAMI */
+
+.adwin-main
+{
+	font-family: 'Mukta', sans-serif;
+	margin-top: 30px;
+}
+
+.adwin-down
+{
+	padding: 0 40px;
+	width: 100%;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.adwin-main a
+{
+	color: black;
+}
+
+.adwin-mainheader
+{
+	max-height: 50px;		/*podejrzane*/
+	max-width: 350px;		/*podejrzane*/
+	display: flex;
+  	align-items: center;
+}
+
+.adwin-header
+{
+	font-size: 22px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	float: left;
+}
+
+.adwin-seeall
+{
+	font-size: 15px;
+	font-weight: 600;
+	padding-left: 9px;
+	padding-bottom: 6px;
+}
+
+.adwin-seeall a
+{
+	text-decoration: none;
+	color: #00B4FF;
+}
+
+
+
+
+.wtb-singlead
+{
+	/*float: left;*/
+	display: inline-block;
+	width: 350px;
+	height: 320px;
+	margin: 5px 5px 5px 0;
+	cursor: pointer;
+	text-decoration: none;
+	color: #191919;
+	position: relative;
+}
+
+.wtb-singlead ~ .wtb-singlead
+{
+	margin-left: 5px;
+}
+
+.wtb-img
+{
+	width: 100%;
+	height: 270px;
+	background-color: #FAFAFA;
+}
+
+.wtb-info
+{
+	margin-top: 5px;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+
+.wtb-info h1
+{
+	margin: 0;
+	font-size: 18px;
+    font-weight: 400;
+}
+
+.wtb-info h2
+{
+	margin: 0;
+	margin-top: -12px;
+	font-size: 17px;
+	font-weight: 600;
+	color: #00B4FF;
+}
+
+.adwin-hover
+{
+	display: none;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+.adwin-hover span
+{
+	display: block; 
+	color: white; 
+	font-size: 30px;
+	font-weight: 600;
+}
+
+.wtb-singlead:hover .adwin-hover
+{
+	display: flex;
+	width: 100%;
+	height: 270px;
+	background-color: rgba(0,180,255,0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* ŚRODKOWA NAWIGACJA */
+
+#midnav
+{
+	width: 100%;
+	margin-top: 58px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+
+#midnav a
+{
+	width: 50%;
+}
+
+#midnav i
+{
+	position: absolute;
+}
+
+.sellbuy
+{
+	filter: brightness(1);
+}
+
+.sellbuy:hover
+{
+	filter: brightness(1.1);
+}
+
+.sellbuy img
+{
+	width: 100%;
+	display: block;
+}
+
+.midnav-searchbox
+{
+	position: absolute; 
+	bottom: 35px;
+}
+
+.midnav-searchbox input[type=search]
+{
+	width: 685px;	
+	height: 50px;
+	padding: 5px 60px 5px 25px;
+	font-size: 21px;
+	border-radius: 4px;
+	border: 0;
+	position: relative;
+	outline: none;
+}
+
+.midnav-searchbox i
+{
+	position: absolute; 
+	bottom: 11px; 
+	right: 15px; 
+	font-size: 25px;
+}
+
+.midnav-searchbox input[type=search]::-webkit-search-cancel-button
+{
+	-webkit-appearance: none;
+}
+
+.midnav-searchbox input[type=search]::-webkit-input-placeholder
+{
+	color: #999;
+}
+
+/* OKNO Z PYTANIAMI */
+
+.quewin-main
+{
+	background-color: #F0F0F0;
+  	width: 100%;
+  	height: 100px;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.quewin-singlewin
+{
+	width: 840px;
+	height: 80px;
+	background-color: #C7C7C7;
+	cursor: pointer;
+}
+
+.quewin-singlewin:hover .quewin-brandname
+{
+	text-decoration: underline;
+}
+
+.quewin-categoryinfo
+{
+	display: flex;
+	float: left;
+	width: 80px;
+	height: 80px;
+	background-color: #CC2323;
+	
+	justify-content: center;
+	font-size: 50px;
+	font-weight: 600;
+	color: white;
+	align-items: center;
+}
+
+.quewin-answersvisitsinfo
+{
+	display: flex;
+	float: left;
+	width: 80px;
+	height: 80px;
+	background-color: #151515;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.quewin-infoblock
+{
+	text-align: center;
+	margin-top: -8px; 
+}
+
+.quewin-numberofanswers
+{
+	color: white;
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.quewin-answers
+{
+	color: white;
+	font-weight: 600;
+	font-size: 10px;
+	margin-top: -6px;
+}
+
+.quewin-brandinfo
+{
+	display: flex;
+	float: left;
+	width: 580px;
+	height: 80px;
+	text-align: left;
+	padding: 0 10px;
+	align-items: center;
+}
+
+.quewin-brandname
+{
+	color: white;
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.quewin-timeanduser
+{
+	margin-top: -5px;
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+}
+
+.quewin-info
+{
+	color: #151515;
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.quewin-arrows
+{
+	display: block;
+	width: 80px;
+	height: 80px;
+}
+
+.quewin-arrow
+{
+	border: solid #151515;	/*777777*/
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 10px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.up
+{
+	transform: rotate(-135deg);
+	margin-top: 20px;
+}
+
+.up:hover{border-color:red;}
+.down:hover{border-color:red;}
+
+.down
+{
+	margin-top: -20px;
+	transform: rotate(45deg);
+}
+
+/* QUICKSELL */
+
+.quicksell-main
+{
+	background-image: url("ps/back.png");
+  	width: 100%;
+  	height: 250px;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.quicksell-window
+{
+	background-color: rgba(119,119,119,0.9);
+	width: 800px;
+  	height: 230px;
+  	display: flex;
+  	align-items: center;
+}
+
+.quicksell-center
+{
+	width: 100%;
+	height: 220px;
+}
+
+.quicksell-img
+{
+	box-sizing: border-box;
+	background-color: #151515;
+	width: 220px;
+	height: 220px;
+	margin-left: 5px;
+	float: left;
+	border: 2px solid #00B4FF;
+	cursor: pointer;
+}
+
+.quicksell-info
+{
+	box-sizing: border-box;
+	display: inline-block;
+	width: 575px;
+	padding: 10px 20px 0 20px;
+}
+
+.quicksell-brand:hover
+{
+	text-decoration: underline;
+}
+
+.quicksell-brand
+{
+	line-height: 35px;
+	font-size: 40px;
+	font-weight: 600;
+	color: white;
+	cursor: pointer;
+}
+
+.quicksell-conditionsizelc
+{
+	margin-top: 5px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+}
+
+.quicksell-price
+{
+	font-size: 25px;
+	font-weight: 600;
+	color: white;
+	margin-top: 5px;
+}
+
+.quicksell-yellow
+{
+	color: #00B4FF;
+}
+
+.quicksell-buynow
+{
+	cursor: pointer;
+	margin-top: 10px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-size: 25px;
+	font-weight: 600;
+	background-color: #00B4FF;
+	text-align: center;
+	width: 160px;
+	padding: 6px 0;
+	color: white;
+}
+
+.quicksell-buynow:hover
+{
+	filter: brightness(1.1);
+}
+
+.quicksell-user
+{
+	font-size: 14px;
+	color: white;
+}

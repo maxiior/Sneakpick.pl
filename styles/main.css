@@ -1,0 +1,608 @@
+/* GÓRNA NAWIGACJA */
+
+.topnav
+{
+	font-family: 'Work Sans', sans-serif;
+	background-color: #151515;
+	display: flex;
+	align-items: center;
+  	justify-content: flex-end;
+  	width: 100%;
+  	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	height: 58px;
+	font-size: 18px;
+}
+
+.topnav .topnav-ALL
+{
+	color: #00B4FF;
+	font-weight: 600;
+}
+
+.topnav .topnav-ALL2
+{
+	color: #DDD;
+	font-weight: 600;
+}
+
+.topnav ol
+{
+	padding: 10px;
+	margin: 0;
+	list-style-type: none;
+	height: 38px;
+	line-height: 200%;
+	display: block;
+}
+
+.topnav ol a
+{
+	color: white;
+	text-decoration: none;
+	display: block;
+}
+
+.topnav ol > li
+{
+	float: left;
+	margin: 0 20px;
+}
+
+.topnav ol > li:hover > a
+{
+	color: #00B4FF;
+	padding-bottom: 9px;
+	border-bottom: 3px solid #00B4FF;
+}
+
+.topnav ol > li > ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	height: 38px;
+	width: 105px;
+	display: none;
+	position: absolute;
+}
+
+.topnav ol > li > ul > li > a
+{
+	color: #151515;
+	font-size: 15px;
+	padding: 0 10px;
+}
+
+.topnav ol > li:hover > ul
+{
+	display: block;
+}
+
+.topnav ol > li > ul > li
+{
+	background-color: white;
+	z-index: 100;
+	border-left: 1px solid #00B4FF;
+	border-right: 1px solid #00B4FF;
+}	
+
+.topnav ol > li > ul > li:first-child
+{
+	border-top: 1px solid #00B4FF;
+}
+
+.topnav ol > li > ul > li:last-child
+{
+	border-bottom: 1px solid #00B4FF;
+}
+
+.topnav ol > li > ul > li:hover
+{
+	background-color: #F0F0F0;
+	border-right: 4px solid #00B4FF;
+}
+
+.topnav ol > li > ul > li:hover > a
+{
+	color: #00B4FF;
+}
+
+.topnav ol > li > ul > li > ul
+{
+	list-style-type: none;
+	display: none;
+	top: 0;
+	position: absolute;
+	padding: 0;
+	margin: 0 0 0 104px;
+	height: 38px;
+	width: 140px;
+}
+
+.topnav ol > li > ul > li > ul > li
+{
+	background-color: white;
+	z-index: 100;
+	border-right: 1px solid #DDD;
+}
+
+.topnav ol > li > ul > li > ul > li:first-child
+{
+	border-top: 1px solid #DDD;
+}
+
+.topnav ol > li > ul > li > ul > li:last-child
+{
+	border-bottom: 1px solid #DDD;
+}
+
+.topnav ol > li > ul > li > ul > li:hover
+{
+	background-color: #F0F0F0;
+	border-right: 4px solid #DDD;
+}
+
+.topnav ol > li > ul > li > ul > li > a
+{
+	color: #151515;
+	font-size: 15px;
+	padding: 0 10px;
+}
+
+.topnav ol > li > ul > li:hover > ul
+{
+	display: block;
+}
+
+.topnav-right
+{
+	font-family: 'Mukta', sans-serif;
+	font-weight: 600;
+	height: 100%;
+	margin-right: 20px;
+	display: flex;
+    align-items: center;
+}
+
+#zaloguj
+{
+	float: left;
+	padding: 5px;
+	margin-right: 10px;
+	color: #00B4FF;
+	cursor: pointer;
+}
+
+#zaloguj:hover
+{
+	filter: brightness(1.2);
+}
+
+#zarejestruj
+{
+	float: left;
+	padding: 5px;
+	color: #DDD;
+	cursor: pointer;
+}
+
+#zarejestruj:hover
+{
+	filter: brightness(1.2);
+}
+
+/* OKNO LOGOWANIA */
+
+.logwin-bg
+{
+	user-select: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(15, 15, 15, 0.8);
+	position: absolute;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 100;
+}
+
+.logwin-content
+{
+	width: 500px;
+	height: 411px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+.logwin-content img
+{
+	margin-bottom: 20px;
+	margin-top: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+.logwin-main
+{
+	font-family: 'Mukta', sans-serif;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 15px;
+}
+
+.logwin-main a
+{
+	text-decoration: none;
+}
+
+.logwin-close
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 25px;
+	cursor: pointer;
+	color: #00B4FF;
+}
+
+.logwin-main input[type=Email],
+.logwin-main input[type=password]
+{
+	display: block;
+	font-family: 'Mukta', sans-serif;
+	font-weight: 300;
+	color: #00B4FF;
+	border: 1px solid #DDD;
+	font-size: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	margin: 10px 0 15px 0;
+	width: 100%;
+}
+
+.logwin-main input[type=Email]::placeholder,
+.logwin-main input[type=password]::placeholder 
+{
+	color: #DDD;
+}
+
+.logwin-main input[type=Email]:-ms-input-placeholder,
+.logwin-main input[type=password]:-ms-input-placeholder
+{
+	color: #DDD;
+}
+
+.logwin-main input[type=Email]::-ms-input-placeholder,
+.logwin-main input[type=password]::-ms-input-placeholder
+{
+	color: #DDD;
+}
+
+
+.logwin-main input[type=Email]:focus,
+.logwin-main input[type=password]:focus
+{
+	border: 1px solid #00B4FF;
+	color: #00B4FF;
+}
+
+.logwin-zaloguj 
+{
+	background-color: #00B4FF;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 2px 0;
+	outline: none;
+	border: none;
+	height: 29px;
+}
+
+.logwin-zaloguj:hover
+{
+	filter: brightness(1.1);
+}
+
+.logwin-zalogujfb
+{
+	background-color: #0086BE;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 2px 0;
+}
+
+.logwin-zalogujfb:hover
+{
+	filter: brightness(1.1);
+}
+
+.logwin-border
+{
+	border-top: 1px solid #777;
+	margin-top: 15px;
+}
+
+.logwin-que
+{
+	color: #777;
+}
+
+/* OKNO REJESTRACJI */
+
+.signwin-bg
+{
+	user-select: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(15, 15, 15, 0.7);
+	position: absolute;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	display: none;
+	z-index: 100;
+}
+
+.signwin-content
+{
+	width: 500px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+.signwin-content img
+{
+	margin-bottom: 20px;
+	margin-top: 15px;
+	width: 100px;
+	height: 100px;
+}
+
+.signwin-main
+{
+	font-family: 'Mukta', sans-serif;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 15px;
+}
+
+.signwin-main a
+{
+	text-decoration: none;
+}
+
+.signwin-main input[type=Email],
+.signwin-main input[type=password],
+.signwin-main input[type=text]
+{
+	display: block;
+	font-family: 'Mukta', sans-serif;
+	font-weight: 300;
+	color: #00B4FF;
+	border: 1px solid #DDD;
+	font-size: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	margin-bottom: 15px;
+	width: 100%;
+}
+
+.signwin-main input[type=Email]:focus,
+.signwin-main input[type=password]:focus,
+.signwin-main input[type=text]:focus
+{
+	border: 1px solid #00B4FF;
+	color: #00B4FF;
+}
+
+
+
+.signwin-main input[type=Email]::placeholder,
+.signwin-main input[type=password]::placeholder,
+.signwin-main input[type=text]::placeholder 
+{
+	color: #DDD;
+}
+
+.signwin-main input[type=Email]:-ms-input-placeholder,
+.signwin-main input[type=password]:-ms-input-placeholder,
+.signwin-main input[type=text]:-ms-input-placeholder 
+{
+	color: #DDD;
+}
+
+.signwin-main input[type=Email]::-ms-input-placeholder,
+.signwin-main input[type=password]::-ms-input-placeholder,
+.signwin-main input[type=text]::-ms-input-placeholder 
+{
+	color: #DDD;
+}
+
+.signwin-zarejestruj
+{
+	background-color: #00B4FF;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 2px 0;
+	outline: none;
+	border: none;
+	height: 29px;
+	margin-bottom: 15px;
+}
+
+.signwin-zarejestruj:hover
+{
+	filter: brightness(1.1);
+}
+
+.signwin-zarejestrujfb
+{
+	background-color: #0086BE;
+	color: white;
+	cursor: pointer;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 2px 0;
+}
+
+.signwin-zarejestrujfb:hover
+{
+	filter: brightness(1.1);
+}
+
+.signwin-close
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 25px;
+	cursor: pointer;
+	color: #00B4FF;
+}
+
+.sl-border
+{
+	background: white; 
+    padding: 0 10px;
+}
+
+.sl-h
+{
+	width: 100%; 
+	text-align: center; 
+	border-bottom: 1px solid #777; 
+   	line-height: 1px;
+   	margin: 25px 0;
+   	color: #777;
+}
+
+/* FOOTER */
+
+#foot
+{
+	font-family: 'Work Sans', sans-serif;
+	background-color: #151515;
+	display: flex;
+	width: 100%;
+  	align-items: center;
+  	color: white;
+	font-size: 12px;
+	height: 58px;
+}
+
+.leftfoot
+{
+	text-align: left;
+	width: 50%;
+	margin: 0 50px;
+	padding: 0;
+	list-style-type: none;
+}
+
+.leftfoot > li
+{
+	display: inline-block;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.leftfoot a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.leftfoot a:hover
+{
+	color: #00B4FF;
+}
+
+.rightfoot
+{
+	text-align: right;
+	width: 50%;
+	margin: 0 50px;
+	padding: 0;
+}
+
+.logreg-form
+{
+	width: 100%;
+}
+
+/* CHECKBOX */
+
+.signwin-checkboxContainer input
+{
+	display: none;
+}
+
+.signwin-checkboxContainer
+{
+	width: 100%;
+	display: inline-block;
+	padding-left: 22px;
+	position: relative;
+	cursor: pointer;
+	font-size: 14px;
+	user-select: none;
+	text-align: left;
+	margin-bottom: 15px;
+	color: #777;
+}
+
+.signwin-text
+{
+	margin-top: -3px;
+}
+
+.signwin-checkmark
+{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+
+.signwin-checkboxContainer input:checked + .signwin-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.signwin-checkboxContainer:hover .signwin-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.signwin-checkboxContainer input:checked + .signwin-checkmark:after
+{
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 7px;
+	border-left: 2px solid #00B4FF;
+	border-bottom: 2px solid #00B4FF;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}

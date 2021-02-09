@@ -1,0 +1,126 @@
+{% extends "main.html" %}
+
+{% block header %}
+	<!--<title> nazwa strony </title>-->
+	<!--<meta description="" content=""/>-->
+	<!--<meta content="keywords" content=""/>-->
+
+	<link rel="stylesheet" href="styles/wts.css" type="text/css"/>
+	<link href="font/css/fontello.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.structure.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.theme.css">
+{% endblock header %}
+
+{% block content %}			
+	<main>
+		<article>
+			<div class="adwin-main">
+				<div class="adwin-cen">
+					<div class="adwin-window">
+						<div class="adwin-header"><h1>WANT TO SELL</h1></div>
+						<div class="adwin-form">
+							<div class="adwin-form-left">
+								<form>
+									<input type="text" placeholder="Nazwa przedmiotu" maxlength="70">
+									<div id="adwin-select-category" class="btn">
+										<div class="valueHolder" data-value="">Kategoria</div>
+									</div>
+									<div id="adwin-select-condition" class="btn">
+										<div class="valueHolder">Stan</div>
+									</div>
+									<div id="adwin-select-kind" class="btn">
+										<div class="valueHolder">Rodzaj</div>
+									</div>
+									<div id="adwin-select-sizeClothing" class="btn">
+										<div class="valueHolder">Rozmiar</div>
+									</div>
+									<div id="adwin-select-sizeFootwear" class="btn">
+										<div class="valueHolder">Rozmiar</div>
+									</div>
+									<div id="adwin-select-fit" class="btn">
+										<div class="valueHolder">Fit</div>
+									</div>
+									<div id="adwin-select-cw" class="btn">
+										<div class="valueHolder">CW</div>
+									</div>
+									<div class="adwin-dimensions">
+										<input type="text" placeholder="Długość [cm]" maxlength="3">
+										<input type="text" placeholder="Szerokość [cm]" maxlength="3">
+									</div>
+									<input type="text" placeholder="Długość [cm]" id="adwin-length" maxlength="3">
+									<textarea id="adwin-textarea" rows="4" placeholder="Opis" maxlength="200"></textarea>
+									<div id="adwin-lettercounter">Pozostało znaków: 200</div>
+									<input type="text" placeholder="Cena [PLN]" id="adwin-price" onchange="showPrice()" maxlength="7">
+									<div class="adwin-delivery">
+										<label>Forma dostarczenia:</label>
+										<label class="adwin-checkboxContainer adwin-cbCmargin">SHIP
+											<input type="checkbox" id="adwin-ship-checkbox" onclick="showShipInput()">
+											<span class="adwin-checkmark"></span>
+										</label>
+										<label class="adwin-checkboxContainer adwin-cbCmargin">MEET
+											<input type="checkbox" id="adwin-meet-checkbox" onclick="showMeetInput()">
+											<span class="adwin-checkmark"></span>
+										</label>
+									</div>
+									<input type="text" placeholder="Cena za ship [PLN]" id="adwin-shipprice" maxlength="3">
+									<input type="text" placeholder="Miasto" id="adwin-meetcity" maxlength="30">
+								</form>
+							</div>
+							<div class="adwin-form-right">
+								<div class="adwin-form-right-window">
+									<div class="adwin-addphoto">
+										<div class="adwin-center">
+											<i class="icon-camera"></i>
+											<p>DODAJ ZDJĘCIE GŁÓWNE</p>
+										</div>
+									</div>
+									<div class="adwin-photos">
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+									</div>
+									<div class="adwin-photos">
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+										<div class="adwin-photo"><i class="icon-camera"></i></div>
+									</div>
+									<div class="adwin-remembertag">[Pamiętaj o dodaniu zdjęcia z tagiem]</div>
+									<div class="adwin-checkbox-buynow">
+										<label class="adwin-checkboxContainer">Aktywuj opcję 
+											<div class="adwin-buynow">KUP TERAZ
+												<div class="adwin-popup">Opcja ta pozwala na szybką sprzedaż przedmiotu. W przypadku kupna, automatycznie zostanie przelana na Twoje konto podana przez Ciebie kwota, z odprowadzoną prowizją w wysokości 10%.</div>
+											</div>
+											<span id="adwin-showprice"></span>
+											<input type="checkbox" id="adwin-ship-checkbox" onclick="showShipInput()">
+											<span class="adwin-checkmark"></span>
+										</label>
+									</div>
+									<div class="adwin-checkbox-buynow">
+										<label class="adwin-checkboxContainer">Aktywuj opcję 
+											<div class="adwin-buynow">GIFT DLA BUMPERA
+												<div class="adwin-popup">Pop up</div>
+											</div>
+											<span id="adwin-showprice"></span>
+											<input type="checkbox" id="adwin-ship-checkbox" onclick="showShipInput()">
+											<span class="adwin-checkmark"></span>
+										</label>
+									</div>
+									<a href="#"><div class="adwin-add">DODAJ OGŁOSZENIE</div></a>
+								</div>
+							</div>
+							<div style="clear:both;"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
+	<script src="/STRONA2/jquery.js"></script>
+	<script src="/STRONA2/lib/jquery-ui/jquery-ui.js"></script>
+	<script src="wts.js"></script>
+{% endblock content %}

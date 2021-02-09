@@ -1,0 +1,152 @@
+{% extends "main.html" %}
+
+{% block header %}	
+    <!--<title> nazwa strony </title>-->
+    <!--<meta description="" content=""/>-->
+    <!--<meta content="keywords" content=""/>-->
+
+	<link rel="stylesheet" href="styles/singleAd.css" type="text/css"/>
+	<link href="font/css/fontello.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.structure.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.theme.css">
+{% endblock header %}
+
+{% block content %}
+    <main>
+        <div class="singleAd-main">
+            <div class="singleAd-ad">
+                <header class="singleAd-header">
+                    <div class="wtb-selectionlist">
+                        <ol>
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">Sneakersy</a></li>
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">Nike Air Max 270</a></li>
+                        </ol>
+                    </div>
+                    <div class="wtb-header">
+                        <span class="singleAd-wtsTag">WTS</span> 
+                        <div id="singleAd-itemName">NIKE AIR MAX 270</div>
+                        <div class="singleAd-bump">BUMP</div>
+                        <div class="singleAd-bumpsNumber">+10</div>
+                    </div>
+                </header>
+                <div class="singleAd-adLeft">
+                    <div class="singleAd-photo">
+                        <div class="singleAd-arrow singleAd-arrowLeft"><i class="demo-icon icon-left-open-big"></i></div>
+                        <div class="singleAd-arrow singleAd-arrowRight"><i class="demo-icon icon-right-open-big"></i></div>
+                    </div>
+                    <div class="singleAd-nextPhotos">
+                        <div class="singleAd-dot singleAd-checkedDot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                        <div class="singleAd-dot">&#xf111;</div>
+                    </div>
+                </div>
+                <div class="singleAd-adRight">
+                    <div class="singleAd-specificationsBox">
+                        <!--<header id="singleAd-nameAndLastname">JAN KOWALSKI</header>-->
+                        <div class="singleAd-specifications">
+                            <div class="singleAd-singleSpecification">
+                                <div>
+                                    <div class="singleAd-value">44.0</div>
+                                    <div class="singleAd-under">ROZMIAR [eu]</div>
+                                </div>
+                            </div>
+                            <div class="singleAd-singleSpecification">
+                                <div>
+                                    <div class="singleAd-value">28.5</div>
+                                    <div class="singleAd-under">DŁUGOŚĆ [cm]</div>
+                                </div>
+                            </div>
+                            <div class="singleAd-singleSpecification">
+                                <div>
+                                    <div class="singleAd-value">DS</div>
+                                    <div class="singleAd-under">STAN</div>
+                                </div>
+                            </div>
+                            <div class="singleAd-singleSpecification">
+                                <div>
+                                    <div class="singleAd-value">M</div>
+                                    <div class="singleAd-under">RODZAJ</div>
+                                </div>
+                            </div>
+                            <div class="singleAd-singleSpecification">
+                                <div>
+                                    <div class="singleAd-value ball">&#xf111;</div>
+                                    <div class="singleAd-under">CW</div>
+                                </div>
+                            </div>
+                            <!--<div class="singleAd-singleSpecification" style="background: #FFAC0D;"></div>-->
+                        </div>
+                        <div class="singleAd-description">
+                            <span>Opis</span>
+                            <div id="singleAd-descriptionValue">Reissued in August 2019, the adidas Yeezy Boost 700 V2 Kids 'Wave Runner' was first revealed at the Season 5 runway show. This version stays true to the adult original in multicolo.</div>
+                            <div class="singleAd-addedBy">Sprzedawca: 
+                                <span>Jan Kowalski</span>
+                            </div>
+                            <div class="singleAd-addTime">Dodane 2 minuty temu</div>
+                        </div>
+                        <div class="singleAd-informations">
+                            <div class="singleAd-price">Cena: 
+                                <span>500 PLN</span>
+                            </div>
+                            <div class="singleAd-price">Ship: 
+                                <span>20 PLN</span>
+                            </div>
+                            <div class="singleAd-price">Meet: 
+                                <span>Warszawa</span>
+                            </div>
+                        </div>
+                        <div class="singleAd-buyNow">KUP TERAZ</div>
+                        <div class="singleAd-priv">PRIV</div>
+                        <div class="singleAd-priv">
+                            <i class="demo-icon icon-attention-alt"></i>
+                            <span class="singleAd-reportText">CALLOUT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="singleAd-similar">
+                <div class="singleAd-similarHeader">Podobne</div>
+                <div class="singleAd-singleSimilarAd">
+                    <div class="singleAd-singleSimilarAdImage"></div>
+                    <h1>ADIDAS YEEZY 350</h1>
+                    <h2>920PLN ALL-IN</h2>
+                </div>
+                <div class="singleAd-singleSimilarAd">
+                    <div class="singleAd-singleSimilarAdImage"></div>
+                    <h1>ADIDAS YEEZY 350</h1>
+                    <h2>920PLN ALL-IN</h2>
+                </div>
+                <div class="singleAd-singleSimilarAd">
+                    <div class="singleAd-singleSimilarAdImage"></div>
+                    <h1>ADIDAS YEEZY 350</h1>
+                    <h2>920PLN ALL-IN</h2>
+                </div>
+                <div class="singleAd-singleSimilarAd">
+                    <div class="singleAd-singleSimilarAdImage"></div>
+                    <h1>ADIDAS YEEZY 350</h1>
+                    <h2>920PLN ALL-IN</h2>
+                </div>
+                <div class="singleAd-singleSimilarAd last">
+                    <div class="singleAd-singleSimilarAdImage"></div>
+                    <h1>ADIDAS YEEZY 350</h1>
+                    <h2>920PLN ALL-IN</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/STRONA2/jquery.js"></script>
+    <script src="/STRONA2/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="singleAd.js"></script>
+{% endblock content %}

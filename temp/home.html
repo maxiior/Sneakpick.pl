@@ -1,0 +1,397 @@
+{% extends "main.html" %}
+
+{% block header %}
+	<!--<title> nazwa strony </title>-->
+	<!--<meta description="" content=""/>-->
+	<!--<meta content="keywords" content=""/>-->
+
+	<link rel="stylesheet" href="styles/home.css" type="text/css"/>
+	<link href="font/css/fontello.css" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap&subset=latin-ext" rel="stylesheet">
+{% endblock header %}
+
+{% block content %}
+	<div class="logwin-bg">
+		<div class="logwin-content">
+			<div class="logwin-close"><i class="icon-cancel"></i></div>
+			<img src="styles/ps/logo.jpg" alt="">
+			<div class="logwin-main">
+				<form action="login.php" method="post">
+					<a href="#"><div class="logwin-zalogujfb"><i class="icon-facebook-official"></i>Logowanie przez Facebooka</div></a>
+					<div class="sl-h"><span class="sl-border">lub przez email</span></div>
+					<input type="Email" placeholder="Email" name="email">
+					<input type="password" placeholder="Hasło" name="password">
+					<input type="submit" class="logwin-zaloguj" value="Zaloguj się"/>
+					<div class="logwin-border"></div>
+					<a href="#" class="logwin-que">Nie pamiętasz hasła?</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="signwin-bg">
+		<div class="signwin-content">
+			<div class="signwin-close"><i class="icon-cancel"></i></div>
+			<img src="styles/ps/logo.jpg" alt="">
+			<div class="signwin-main">
+				<form action="register.php" method="post">
+					<a href="#"><div class="signwin-zarejestrujfb"><i class="icon-facebook-official"></i>Zarejestruj się przez Facebooka</div></a>
+					<div class="sl-h"><span class="sl-border">lub przez email</span></div>
+					<input type="text" placeholder="Imię" name="firstName" value="{{ fr_firstName }}">
+					<input type="text" placeholder="Nazwisko" name="lastName" value="{{ fr_lastName }}">
+					<input type="text" placeholder="Miasto" name="city" value="{{ fr_city }}">
+					<input type="Email" placeholder="Email" name="email" value="{{ fr_email }}">
+					<input type="password" placeholder="Hasło" name="password1" value="{{ fr_password1 }}">
+					<input type="password" placeholder="Powtórz hasło" name="password2" value="{{ fr_password2 }}">
+					<label class="adwin-checkboxContainer">
+						<div class="adwin-text">Oświadczam, że znam i akceptuję postanowienia Regulaminu.</div>
+						<input type="checkbox" name="regulations" {{ fr_regulations }}>
+						<span class="adwin-checkmark"></span>
+					</label>
+					<input type="submit" class="signwin-zarejestruj" value="Zarejestruj się"/>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<nav id="midnav">
+		<a href="wts.php">
+			<div class="sellbuy">
+				<img src="styles/ps/sell.png">
+			</div>
+		</a>
+
+		<a href="wtb.php">
+			<div class="sellbuy">
+				<img src="styles/ps/buy.png">
+			</div>
+		</a>
+
+		<div class="midnav-searchbox">
+			<input type="search" placeholder="Szukaj przedmiotu (marka, rozmiar, kolor itd.)">
+			<i class="icon-search"></i>
+		</div>
+	</nav>
+
+	<main>
+		<article>
+			<section>
+				<div class="quewin-main">
+					<div class="quewin-singlewin">
+						<div class="quewin-categoryinfo">
+							<span>LC</span>
+						</div>
+						<div class="quewin-answersvisitsinfo">
+							<div class="quewin-infoblock">
+								<div class="quewin-numberofanswers">0</div>
+								<div class="quewin-answers">ODPOWIEDZI</div>
+							</div>
+						</div>
+						<div class="quewin-answersvisitsinfo">
+							<div class="quewin-infoblock">
+								<div class="quewin-numberofanswers">0</div>
+								<div class="quewin-answers">WIZYT</div>
+							</div>
+						</div>
+
+						<div class="quewin-brandinfo">
+							<div>
+								<div class="quewin-brandname">ADIDAS YEEZY BOOST 350 V2 BELUGA 2.0</div>
+								<div class="quewin-timeanduser">DODANE <span class="quewin-info">15 MINUT</span> TEMU PRZEZ <span class="quewin-info">USER</span></div>
+							</div>
+						</div>
+					</div>
+
+					<div class="quewin-arrows">
+						<div class="quewin-arrow up"></div>
+						<div class="quewin-arrow down"></div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="quicksell-main">
+					<div class="quicksell-window">
+						<div class="quicksell-center">
+							<div class="quicksell-img"></div>
+							<div class="quicksell-info">
+								<div class="quicksell-brand">Jordan 1 Retro High Obsidian UNC</div>
+								<div class="quicksell-conditionsizelc">STAN:<span class="quicksell-yellow">DS</span> | ROZMIAR:<span class="quicksell-yellow">44.0</span> | LC:<span class="	quicksell-yellow">LEGIT</span></div>
+								<div class="quicksell-user">DODANE PRZEZ <span class="quicksell-yellow">USER</span> (<span class="quicksell-yellow">GOAT</span>)</div>
+								<div class="quicksell-price">CENA:<span class="quicksell-yellow">700PLN ALL-IN</span></div>
+								<div class="quicksell-buynow">KUP TERAZ</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<article class="adwin-down">
+				<section class="adwin-main">
+					<div class="adwin-mainheader">
+						<header>
+							<div class="adwin-header">POLECANE</div>
+						</header>
+
+						<div class="adwin-seeall">
+							<a href="#">ZOBACZ WSZYSTKIE<a>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+				</section>
+
+				<section class="adwin-main">
+					<div class="adwin-mainheader">
+						<header>
+							<div class="adwin-header">POPULARNE</div>
+						</header>
+
+						<div class="adwin-seeall">
+							<a href="#">ZOBACZ WSZYSTKIE<a>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+				</section>
+
+				<section class="adwin-main">
+					<div class="adwin-mainheader">
+						<header>
+							<div class="adwin-header">AUKCJE</div>
+						</header>
+
+						<div class="adwin-seeall">
+							<a href="#">ZOBACZ WSZYSTKIE<a>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="adwin-hover">
+							<div>
+								<span>DS</span>
+								<span>XL</span>
+								<span>MĘSKIE</span>
+							</div>
+						</div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+					<div style="clear:both;"></div>
+				</section>
+			</article>
+		</article>
+	</main>
+{% endblock content %}

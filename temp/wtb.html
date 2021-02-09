@@ -1,0 +1,319 @@
+{% extends "main.html" %}
+
+{% block header %}	
+	<!--<title> nazwa strony </title>-->
+	<!--<meta description="" content=""/>-->
+	<!--<meta content="keywords" content=""/>-->
+	
+	<link rel="stylesheet" href="styles/wtb.css" type="text/css"/>
+	<link href="font/css/fontello.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Mukta:400,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600&display=swap&subset=latin-ext" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.structure.css">
+	<link rel="stylesheet" href="/STRONA2/lib/jquery-ui/jquery-ui.theme.css">
+{% endblock header %}
+
+{% block content %}
+	<main>
+		<div class="wtb-header">
+			<div class="wtb-title">WANT TO BUY</div>
+		</div>
+		<div class="wtb-main">
+			<div class="wtb-left">
+				<div class="wtb-filtersHeader">
+					<div><span><i class="icon-search-1"></i></span>Filtrowanie</div>
+					<button class="wtb-resetButton">Reset</button>
+				</div>
+				<div class="wtb-filters">
+					<h1>Kategoria</h1>
+					<div id="wtb-categorieslist" onchange="showElements()"></div>
+					<span class="wtb-showmore" id="hiddenCategoriesList" onclick="showMoreCategories()">Pokaż więcej</span>
+				</div>
+				<div class="wtb-filters">
+					<h1>Marka</h1>
+					<div id="wtb-brandslist"></div>
+					<span class="wtb-showmore" id="hiddenBrandsList" onclick="showMoreBrands()">Pokaż więcej</span>
+				</div>
+				<div class="wtb-filters" id="wtb-sizesList">
+					<h1>Rozmiar</h1>
+					<div id="wtb-footwearSizesList"></div>
+					<div id="wtb-clothingSizesList"></div>
+				</div>
+				<div class="wtb-filters" id="wtb-fits">
+					<h1>Fit</h1>
+					<div id="wtb-fitsList"></div>
+				</div>
+				<div class="wtb-filters" id="wtb-length">
+					<h1>Długość</h1>
+					<div id="slider-range-length"></div>
+					<div class="wtb-rangeLengthWidth">od 
+						<span id="rangeLengthMin">0</span> do
+						<span id="rangeLengthMax">0</span> [cm]
+					</div>
+				</div>
+				<div class="wtb-filters" id="wtb-width">
+					<h1>Szerokość</h1>
+					<div id="slider-range-width"></div>
+					<div class="wtb-rangeLengthWidth">od 
+						<span id="rangeWidthMin">0</span> do
+						<span id="rangeWidthMax">0</span> [cm]
+					</div>
+				</div>
+				<div class="wtb-filters">
+					<h1>Rodzaj</h1>
+					<div id="wtb-typeslist">
+						<div class="wtb-singletype">
+							<label>
+								<input type="checkbox">
+								<span>MĘSKIE</span>
+							</label>
+						</div>
+						<div class="wtb-singletype">
+							<label>
+								<input type="checkbox">
+								<span>DAMSKIE</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="wtb-filters">
+					<h1>Stan</h1>
+					<div id="wtb-conditionslist"></div>
+				</div>
+				<div class="wtb-filters">
+					<h1>Cena</h1>
+					<input type="range" min="0" max="1000" value="1000" id="wtb-range" onmousemove="rangeSlider(this.value)" onChange="rangeSlider(this.value)">
+					<div class="wtb-rangePrice">do 
+						<span id="rangeValue">1000</span> PLN
+					</div>
+				</div>
+				<div class="wtb-filters">
+					<h1>CW</h1>
+					<div id="wtb-cwlist"></div>
+				</div>
+			</div>
+			<div class="wtb-right">
+				<div class="wtb-righttop">
+					<div>
+						<div class="wtb-selectionlist">
+							<ol>
+								<li><a href="#">All</a></li>
+								<li><a href="#">Sneakersy</a></li>
+								<li><a href="#">Nike</a></li>
+							</ol>
+						</div>
+						<div class="wtb-results">Wyniki: <span class="wtb-bold">2440</span></div>
+						<div class="wtb-sorting">Sortowanie: </div>
+						<div id="adwin-select-category">
+							<div class="valueHolder">Domyślne</div>
+							<i class="icon-down-dir"></i>
+							<div class="dropContainer">
+								<div class="dropOption">Domyślne</div>
+								<div class="dropOption">Cena Rosnąco</div>
+								<div class="dropOption">Cena Malejąco</div>
+								<div class="dropOption">Popularne</div>
+								<div class="dropOption">Najnowsze</div>
+							</div>
+						</div>
+					</div>
+					<div class="wtb-nextPagesList">
+						<div><i class="icon-left-open-big"></i></div>
+						<div class="wtb-singleNumber">1</div>
+						<div class="wtb-singleNumber">2</div>
+						<div class="wtb-singleNumber">3</div>
+						<div class="wtb-threeDots">...</div>
+						<div class="wtb-singleNumber">10</div>
+						<div><i class="icon-right-open-big"></i></div>
+					</div>
+				</div>
+				<div class="wtb-list">
+					<a class="wtb-singlead" href="singleAd.php">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</a>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+					<div class="wtb-singlead">
+						<div class="wtb-img"></div>
+						<div class="wtb-info">
+							<h1>NIKE AIR MAX 95</h1>
+							<h2>500 PLN + SHIP</h2>
+						</div>
+					</div>
+				</div>
+				<div class="wtb-nextPagesListCenter">
+					<div class="wtb-nextPagesList">
+						<div><i class="icon-left-open-big"></i></div>
+						<div class="wtb-singleNumber">1</div>
+						<div class="wtb-singleNumber">2</div>
+						<div class="wtb-singleNumber">3</div>
+						<div class="wtb-threeDots">...</div>
+						<div class="wtb-singleNumber">10</div>
+						<div><i class="icon-right-open-big"></i></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	<script src="/STRONA2/jquery.js"></script>
+	<script src="/STRONA2/lib/jquery-ui/jquery-ui.js"></script>
+	<script src="wtb.js"></script>
+{% endblock content %}

@@ -1,0 +1,693 @@
+body
+{
+	margin: 0;
+	background-color: white;
+	font-family: 'Mukta', sans-serif;
+	color: #151515;
+}
+
+.WTB
+{
+	color: #00B4FF !important;
+	padding-bottom: 9px;
+	border-bottom: 3px solid #00B4FF;
+}
+
+/*HEADER*/
+
+.wtb-header
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top:58px;
+    background-image: url("ps/wtb.png");
+    width: 100%;
+    height: 250px;
+	box-sizing: border-box;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wtb-title
+{
+    color: #00B4FF;
+	font-size: 5em;
+	user-select: none;
+}
+
+/*LISTA Z OGŁOSZENIAMI*/
+
+.wtb-main
+{
+	width: 100%;
+	/*height: 2392px;*/
+	position: relative;
+}
+
+.wtb-right
+{
+	display: block;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding-left: 250px;
+	background-color: #FFF;
+}
+
+.wtb-righttop
+{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 39px;
+	background-color: #FFF;
+	font-size: 16px;
+	justify-content: space-between;
+	user-select: none;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.wtb-selectionlist
+{
+	color: #777777;
+	font-weight: 400;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.wtb-selectionlist ol
+{
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+
+.wtb-selectionlist ol a
+{
+	color: #777777;
+	text-decoration: none;
+}
+
+.wtb-selectionlist ol > li
+{
+	display: inline-block;
+}
+
+.wtb-selectionlist ol > li::before
+{
+	content: "/ ";
+}
+
+.wtb-selectionlist ol > li:first-child:before
+{
+	content: "";
+}
+
+.wtb-selectionlist ol > li > a:hover, .wtb-selectionlist ol > li:last-child > a:hover
+{
+	color: #00B4FF;
+}
+
+.wtb-selectionlist ol > li:last-child > a
+{
+	color: #00B4FF;
+	font-weight: 600;
+}
+
+.wtb-results
+{
+	color: #777777;
+	font-weight: 400;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.wtb-bold
+{
+	color: #00B4FF;
+	font-weight: 600;
+}
+
+.wtb-list
+{
+	box-sizing: border-box;
+	width: 100%;
+	/*height: 2172px;*/
+	padding: 0 40px;
+	margin: 40px 0 0 0;
+}
+
+.wtb-singlead
+{
+	/*float: left;*/
+	color: #151515;
+	display: inline-block;
+	width: 360px;
+	height: 330px;
+	margin: 15px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.wtb-img
+{
+	width: 100%;
+	height: 270px;
+	background-color: #FAFAFA;
+}
+
+.wtb-info
+{
+	margin-top: 5px;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+}
+
+.wtb-info h1
+{
+	margin: 0;
+	font-size: 18px;
+    font-weight: 400;
+}
+
+.wtb-info h2
+{
+	margin: 0;
+	margin-top: -12px;
+	font-size: 17px;
+	font-weight: 600;
+	color: #00B4FF;
+}
+
+.wtb-nextPagesList
+{
+	margin-right: 15px;
+}
+
+.wtb-nextPagesList div
+{
+	display: inline-block;
+}
+
+.wtb-threeDots
+{
+	color: #777777;
+	font-size: 15px;
+	margin: 0 5px;
+	user-select: none;
+}
+
+.wtb-nextPagesList i
+{
+	font-size: 15px;
+	color: #00B4FF;
+	cursor: pointer;
+}
+
+.wtb-nextPagesList i:hover
+{
+	color: #777;
+}
+
+.wtb-singleNumber
+{
+	color: #777777;
+	text-align: center;
+	font-weight: 600;
+	width: 30px;
+	height: 30px;
+	background-color: #F7F7F7;
+	border-radius: 5px;
+	user-select: none;
+	margin: 0 5px;
+	cursor: pointer;
+}
+.wtb-singleNumber:hover, .wtb-singleNumber:nth-child(2):hover
+{
+	background-color: #00A1E6;
+	color: white;
+}
+
+.wtb-singleNumber:nth-child(2)
+{
+	background-color: #00B4FF;
+	color: white;
+}
+
+/* FILTRY */
+
+.wtb-left
+{
+	overflow-y: auto; 
+	height: 100%;
+	width: 250px;
+	background-color: white;
+	position: absolute;
+	user-select: none;
+	border-right: 1px solid #F0F0F0;
+}
+
+.wtb-left::-webkit-scrollbar 
+{
+	width: 10px;
+}
+
+.wtb-left::-webkit-scrollbar-track 
+{
+   background-color: #DDD;
+}
+	
+.wtb-left::-webkit-scrollbar-thumb 
+{
+	background: #00B4FF;
+}
+
+.wtb-left h1
+{
+	margin: 0;
+	font-size: 16px;
+}
+
+.wtb-filtersHeader
+{
+	color: #777777;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 30px;
+	width: 100%;
+	height: 40px;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.wtb-filtersHeader i
+{
+	font-size: 11px;
+}
+
+.wtb-filters
+{
+	width: 100%;
+	padding: 10px 30px;
+	box-sizing: border-box;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.wtb-showmore
+{
+	color: #777777;
+	font-size: 12px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+#wtb-fits,
+#wtb-sizesList,
+#wtb-length,
+#wtb-width
+{
+	display: none;
+}
+
+/* RANGE */
+
+#wtb-range
+{
+	background: #151515;
+	height: 2px;
+	width: 100%;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+#wtb-range::-webkit-slider-thumb
+{
+	-webkit-appearance: none;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	background: #151515;
+}
+
+.wtb-rangePrice
+{
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+}
+
+/* CHECKBOX 1 - SIZE, TYPE, CONDITIONS */
+
+#wtb-clothingSizesList,
+#wtb-typeslist,
+#wtb-conditionslist,
+#wtb-footwearSizesList
+{
+	display: grid;
+	margin-top: 5px;
+	grid-gap: 5px;
+}
+
+#wtb-fitsList
+{
+	display: block;
+}
+
+#wtb-clothingSizesList,
+#wtb-conditionslist,
+#wtb-footwearSizesList
+{
+	grid-template-columns: auto auto auto;
+}
+
+#wtb-typeslist
+{
+	grid-template-columns: auto auto;
+}
+
+.wtb-singlesize span,
+.wtb-singlecondition span
+{
+	width: 60px;
+}
+
+.wtb-singlefit span
+{
+	margin-top: 5px;
+	width: 190px;
+	display: flex;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	height: 30px;
+	font-size: 15px;
+	cursor: pointer;
+	color: #DDDDDD;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.wtb-singletype span
+{
+	width: 92.5px;
+}
+
+.wtb-singlesize span, 
+.wtb-singletype span,
+.wtb-singlecondition span
+{
+	display: flex;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	height: 30px;
+	font-size: 15px;
+	cursor: pointer;
+	color: #DDDDDD;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+}
+
+.wtb-singlesize label, 
+.wtb-singletype label,
+.wtb-singlecondition label
+{
+    cursor: pointer;
+}
+
+.wtb-singlesize label input[type="checkbox"],
+.wtb-singletype label input[type="checkbox"],
+.wtb-singlecondition label input[type="checkbox"],
+.wtb-singlefit label input[type="checkbox"]
+{
+    display: none;
+}
+
+.wtb-singlesize label span,
+.wtb-singletype label span,
+.wtb-singlecondition label span,
+.wtb-singlefit label span
+{
+    overflow: hidden;
+}
+
+.wtb-singlesize label input[type="checkbox"]:checked ~ span,
+.wtb-singletype label input[type="checkbox"]:checked ~ span,
+.wtb-singlecondition label input[type="checkbox"]:checked ~ span,
+.wtb-singlefit label input[type="checkbox"]:checked ~ span
+{
+	border-color: #151515;
+	color: white;
+	background-color: #151515;
+}
+
+/* CHECKBOX 2 - CATEGORY, BRAND */
+
+.wtb-visibleCheckbox
+{
+	margin: 5px 0;
+	display: block;
+}
+
+.wtb-hiddenBrandsList,
+.wtb-hiddenCategoriesList
+{
+	margin: 5px 0;
+	display: none;
+}
+
+.wtb-checkbox-container input
+{
+	display: none;
+}
+
+.wtb-checkbox-container
+{
+	display: inline-block;
+	padding-left: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.wtb-singleoption
+{
+	font-size: 15px;
+	margin-top: -4px;
+}
+
+.wtb-checkbox-container .wtb-checkmark
+{
+	display: inline-block;
+	width: 13px;
+	height: 13px;
+	background-color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid #DDD;
+	border-radius: 3px;
+}
+
+.wtb-checkbox-container input:checked + .wtb-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.wtb-checkbox-container:hover .wtb-checkmark
+{
+	border: 1px solid #00B4FF;
+}
+
+.wtb-checkbox-container input:checked + .wtb-checkmark:after
+{
+	content: "";
+	position: absolute;
+	height: 3px;
+	width: 7px;
+	border-left: 2px solid #00B4FF;
+	border-bottom: 2px solid #00B4FF;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* CHECKBOX 3 - CW */
+
+#wtb-cwlist
+{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin-top: 5px;
+	grid-gap: 10px;
+}
+
+.wtb-singlecw .color
+{
+	box-sizing: border-box;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	position: relative;
+}
+
+.wtb-singlecw input[type="checkbox"]
+{
+    display: none;
+}
+
+.wtb-singlecw input[type="checkbox"]:checked ~ .color
+{
+	opacity: 0.7;
+}
+
+.wtb-singlecw input[type="checkbox"]:checked ~ .color .wtb-checkmark
+{
+	content: "";
+	height: 6px;
+	width: 14px;
+	border-left: 2px solid;
+	border-bottom: 2px solid;
+	transform: translate(-50%, -50%) rotate(-45deg);
+	position: absolute;
+	top: 45%;
+	left: 50%;
+}
+
+/*LISTA SORTOWANIA*/
+
+.wtb-sorting
+{
+	color: #777777;
+	font-weight: 400;
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.icon-down-dir
+{
+	display: inline-block;
+	transition-duration: 0.5s;
+	margin-left: -5px;
+	color: #00B4FF;
+}
+
+.valueHolder
+{
+	display: inline-block;
+	color: #00B4FF;
+}
+
+.valueHolder:hover
+{
+	text-decoration: underline;
+}
+
+#adwin-select-category
+{
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+}
+
+.dropContainer
+{
+	width: 130px;
+	position: absolute;
+	background-color: white;
+	display: none;
+	text-align: left;
+	border: 1px solid #F0F0F0;
+	left: 0;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.dropOption
+{
+	padding: 0 10px;
+	height: 25px;
+	cursor: pointer;
+}
+
+.dropOption:hover
+{
+	background-color: #F0F0F0;
+	border-right: 2px solid #00B4FF;
+}
+
+/*RESET BUTTON*/
+
+.wtb-resetButton 
+{
+	font-family: 'Work Sans', sans-serif;
+	padding: 3px 6px;
+	position: absolute;
+	background-color: #00B4FF;
+	border-radius: 5px;
+	right: 50px;
+	border: none;
+	color: #FFF;
+	display: inline-block;
+	font-size: 12px;
+	cursor: pointer;
+	outline: none;
+}
+
+/*MULTIRANGE INPUT*/
+
+.ui-slider-handle
+{
+  margin-top: -3px;
+  border-radius: 50% !important;
+  width: 18px !important;
+  height: 18px !important;
+  background-color: #151515 !important;
+  border: none !important;
+  outline: none !important;
+}
+
+.ui-slider
+{
+  border: none !important;
+  background-color: #151515 !important;
+  height: 2px !important;
+  border-radius: 0 !important;
+}
+
+.wtb-rangeLengthWidth
+{
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+}
+
+#slider-range-length,
+#slider-range-width
+{
+	margin-top: 17px;
+}
+
+.wtb-nextPagesListCenter
+{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 40px;
+}
+
+.wtb-nextPagesListCenter > .wtb-nextPagesList
+{
+	margin-right: 0;
+}
+
+/*FOOTER*/
+
+#foot
+{
+	margin-top: 0 !important;
+}

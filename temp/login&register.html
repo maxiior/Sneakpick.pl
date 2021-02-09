@@ -1,0 +1,41 @@
+<div class="logwin-bg">
+    <div class="logwin-content">
+        <div class="logwin-close"><i class="icon-cancel"></i></div>
+        <img src="styles/ps/logo.jpg" alt="">
+        <div class="logwin-main">
+            <form action="login.php" method="post" class="logreg-form">
+                <a href="#"><div class="logwin-zalogujfb"><i class="icon-facebook-official"></i>Logowanie przez Facebooka</div></a>
+                <div class="sl-h"><span class="sl-border">lub przez email</span></div>
+                <input type="Email" placeholder="Email" name="email">
+                <input type="password" placeholder="Hasło" name="password">
+                <input type="submit" class="logwin-zaloguj" value="Zaloguj się"/>
+                <div class="logwin-border"></div>
+                <a href="#" class="logwin-que">Nie pamiętasz hasła?</a>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="signwin-bg">
+    <div class="signwin-content">
+        <div class="signwin-close"><i class="icon-cancel"></i></div>
+        <img src="styles/ps/logo.jpg" alt="">
+        <div class="signwin-main">
+            <form action="register.php" method="post" class="logreg-form">
+                <a href="#"><div class="signwin-zarejestrujfb"><i class="icon-facebook-official"></i>Zarejestruj się przez Facebooka</div></a>
+                <div class="sl-h"><span class="sl-border">lub przez email</span></div>
+                <input type="text" placeholder="Imię" name="firstName" value="{{ fr_firstName }}">
+                <input type="text" placeholder="Nazwisko" name="lastName" value="{{ fr_lastName }}">
+                <input type="text" placeholder="Miasto" name="city" value="{{ fr_city }}">
+                <input type="Email" placeholder="Email" name="email" value="{{ fr_email }}">
+                <input type="password" placeholder="Hasło" name="password1" value="{{ fr_password1 }}">
+                <input type="password" placeholder="Powtórz hasło" name="password2" value="{{ fr_password2 }}">
+                <label class="signwin-checkboxContainer">
+                    <div class="signwin-text">Oświadczam, że znam i akceptuję postanowienia Regulaminu.</div>
+                    <input type="checkbox" name="regulations" {{ fr_regulations }}>
+                    <span class="signwin-checkmark"></span>
+                </label>
+                <input type="submit" class="signwin-zarejestruj" value="Zarejestruj się"/>
+            </form>
+        </div>
+    </div>
+</div>
